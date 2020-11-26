@@ -1,0 +1,65 @@
+@import './colors.module.scss';
+
+// Poppins : 300i, 300, 400i, 400, 600i, 700, 800
+$heading : 'Poppins', sans-serif;
+$paragraph : 'Nunito Sans', sans-serif;
+
+$light : 300;
+$regular : 400;
+$medium : 600;
+$bold : 700;
+$black : 800;
+$italic: italic;
+
+@mixin text-h1 {
+    font-size: 2.25rem; // 40px
+    line-height: 1.5;
+    letter-spacing: 1.5;
+    font-weight: 700;
+    font-family: $heading
+}
+@mixin text-h2 {
+    font-size: 2rem; // 32px
+    line-height: 1.5;
+    font-weight: 700;
+    font-family: $heading
+}
+@mixin text-h3 {
+    font-size: 1.8rem; // 28px
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: $heading
+}
+@mixin text-h4 {
+    font-size: 1.25rem; // 22px
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: $heading
+}
+@mixin text-h5 {
+    font-size: 1.125rem; // 18px
+    line-height: 1.5;
+    font-weight: 500;
+    font-family: $heading
+}
+
+@mixin text-paragraph {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: .5rem;
+    font-weight: 400;
+    font-family: $paragraph
+}
+
+// webpack export
+:export {
+    paragraph : $paragraph;
+    heading : $heading;
+
+    light: $light;
+    regular : $regular;
+    medium : $medium;
+    bold : $bold;
+    black : $black;
+    italic : $italic;
+}
