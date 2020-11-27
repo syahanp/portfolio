@@ -8,10 +8,8 @@ const Text: React.FC<TextProps> = ({
     color
 }) => {
 
-    const fontVariant = `text-${variant}`
-
     return (
-        <Div>
+        <Div variant={variant}>
             { children }
         </Div>
     )
@@ -19,6 +17,6 @@ const Text: React.FC<TextProps> = ({
 
 export default Text;
 
-const Div = styled.div`
-    
+const Div = styled.div<TextProps>`
+    font-family: ${props => props.variant}
 `
